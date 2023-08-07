@@ -1,0 +1,58 @@
+{
+  "name": "ant-forms",
+  "version": "1.0.0",
+  "description": "Ant design forms using json based schema",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs -css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojadams/ant-forms.git"
+  },
+  "keywords": [
+    "ant-forms",
+    "react-forms"
+  ],
+  "author": "manojadams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manojadams/ant-forms/issues"
+  },
+  "homepage": "https://github.com/manojadams/ant-forms#readme",
+  "dependencies": {
+    "@manojadams/metaforms-core": "^3.0.13",
+    "antd": "^5.8.2",
+    "layout-emotions": "^1.0.13"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "@babel/eslint-parser": "^7.19.1",
+    "cross-env": "^7.0.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-standard": "^4.0.1",
+    "microbundle-crl": "^0.13.11",
+    "prettier": "^2.0.4",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5"
+  }
+}
