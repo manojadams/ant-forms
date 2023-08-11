@@ -1,13 +1,19 @@
 import React from "react";
 import { DatePicker as AntDatePicker, Space } from 'antd';
+import { IFieldProps } from "../../common";
 
-interface IProps {
+interface IProps extends IFieldProps {
     
 }
 
 function DatePicker(props: IProps) {
     return (
-        <AntDatePicker />
+        <AntDatePicker 
+            className={props.className}
+            style={{
+                width: "100%"
+            }}
+        />
     )
 }
 

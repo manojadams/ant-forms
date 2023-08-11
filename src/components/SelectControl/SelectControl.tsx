@@ -9,6 +9,9 @@ interface IProps extends IFieldProps {
 function SelectControl(props: IProps) {
     return (
         <Select
+            style={{
+                "width": "100%"
+            }}
             onChange={(val1, val2) => {
                 props.handleChange(null, val1);
             }}

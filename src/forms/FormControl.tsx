@@ -1,8 +1,9 @@
 import React from "react";
 import { BaseFormControl } from "@manojadams/metaforms-core";
-import { Input } from 'antd';
+import { Input, InputNumber } from 'antd';
 import DatePicker from "../components/DatePicker";
 import SelectControl from "../components/SelectControl";
+import CheckboxControl from "../components/CheckboxControl/CheckboxControl";
 
 class FormControl extends BaseFormControl {
     month(): JSX.Element {
@@ -13,8 +14,16 @@ class FormControl extends BaseFormControl {
     }
     date(): JSX.Element {
         return (
-            <DatePicker 
-            
+            <DatePicker
+                className={this.getWrapperClassName()}
+                context={this.context}
+                field={this.field} 
+                setError={this.setError} 
+                form={this.props.form} 
+                size={"small"} 
+                error={this.state.error} 
+                handleChange={this.handleChange}
+                handleValidation={this.handleValidation}
             />
         )
     }
@@ -52,7 +61,6 @@ class FormControl extends BaseFormControl {
         return (
             <Input 
                 type="email"
-                pattern=""
                 placeholder={this.props.form.placeholder}
                 value={this.props.form.value as string}
                 onBlur={this.handleValidation}
@@ -62,12 +70,12 @@ class FormControl extends BaseFormControl {
     }
     number(): JSX.Element {
         return (
-            <Input 
+            <InputNumber 
+                width={"100%"}
                 type="number"
                 placeholder={this.props.form.placeholder}
                 value={this.props.form.value as string}
                 onBlur={this.handleValidation}
-                onChange={this.handleChange}
             />
         )
     }
@@ -75,7 +83,18 @@ class FormControl extends BaseFormControl {
         throw new Error("Method not implemented.");
     }
     checkbox(): JSX.Element {
-        throw new Error("Method not implemented.");
+        return (
+            <CheckboxControl 
+                className={this.getWrapperClassName()}
+                context={this.context}
+                field={this.field}
+                form={this.props.form}
+                error={this.state.error} 
+                size={"small"} 
+                handleChange={this.handleChange}
+                handleValidation={this.handleValidation} 
+                setError={this.setError}            />
+        )
     }
     select(): JSX.Element {
         return (
