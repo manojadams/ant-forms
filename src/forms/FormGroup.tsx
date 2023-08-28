@@ -1,11 +1,24 @@
-import React from "react";
-import { BaseFormGroup } from "@manojadams/metaforms-core";
+import React, { Fragment } from "react";
+import { BaseFormGroup, Section } from "@manojadams/metaforms-core";
+import { Tabs } from "antd";
 
 export default class FormGroup extends BaseFormGroup {
     tabs(): JSX.Element {
-        throw new Error("Method not implemented.");
+        const items = this.sectionFields.map((tab, index) => {
+            return {
+                key: index + "",
+                label: tab.meta.displayName,
+                children: <Section section={tab} index={0} form={this.context.form} activeIndex={index} error={false} />
+            }
+        });
+        return <Tabs defaultActiveKey="1" items={items} onChange={this.handleChange} />
     }
     panels(): JSX.Element {
-        throw new Error("Method not implemented.");
+        return <Fragment />;
     }
+    handleChange(index: string) {
+        console.log(index);
+        // this.setActiveIndex(index);
+    }
+
 }
