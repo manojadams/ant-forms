@@ -17,6 +17,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 <DatePicker
@@ -40,6 +44,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}>
                 <Input 
                     type="text"
@@ -56,6 +64,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item 
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             />
         )
@@ -64,6 +76,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 <Input 
@@ -81,6 +97,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}>
                     <Input 
                         type="email"
@@ -96,6 +116,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 <InputNumber 
@@ -112,6 +136,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 <Radio />
@@ -122,6 +150,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 {
@@ -136,6 +168,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 <CheckboxControl
@@ -156,6 +192,10 @@ class FormControl extends BaseFormControl {
         return (
             <Form.Item
                 label={this.props.form.displayName}
+                labelAlign="left"
+                labelCol={{
+                    md: 6
+                }}
                 name={this.field.name}
             >
                 <SelectControl 
